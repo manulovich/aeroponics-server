@@ -7,6 +7,7 @@ import experimentRoutes from './experiment/routes.experiment.config.js';
 import deviceRoutes from './device/routes.device.config.js';
 import authRoutes from './auth/routes.auth.config.js';
 import userRoutes from './user/routes.user.config.js';
+import { port } from './app.config.js';
 
 const app = express();
 
@@ -29,7 +30,7 @@ const start = async () => {
             'mongodb://127.0.0.1:27017/aeroponics'
         );
         app.listen(
-            3000,
+            port,
             () => {
                 console.log('server started');
             }
