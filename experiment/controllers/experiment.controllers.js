@@ -117,7 +117,7 @@ const getExcelBuffer = async (req, res) => {
         }
 
         res.set('Content-Type', 'multipart/form-data');
-        return res.status(200).send({ excelBuffer: xlsxBuild(experiment) });
+        return res.status(200).send(xlsxBuild(experiment));
     } catch (error) {
         return res.status(503).send({
             error: execMessageFromError(error, FAILED_GET_EXP)
