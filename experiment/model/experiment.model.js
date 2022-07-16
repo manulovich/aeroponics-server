@@ -16,8 +16,8 @@ const experimentSchema = new Schema({
         tempRoom: Number,
         tempWater: Number,
         lightSensor: Number,
-        lightWorkingTime: Number,
-        lightOffTime: Date,
+        lightWorkingTime: String, // 17:30
+        lightOffTime: String, // 17:30
         pumpTime: Number,
         pumpSleep: Number,
         date: {
