@@ -24,6 +24,10 @@ app.use('/experiment', experimentRoutes);
 app.use('/device', deviceRoutes);
 app.use('/user', userRoutes);
 
+app.get('/ping', (req, res) => {
+    return res.send('pong')
+})
+
 const start = async () => {
     try {
         await mongoose.connect(
