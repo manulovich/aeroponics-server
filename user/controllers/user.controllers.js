@@ -40,7 +40,13 @@ const getFullUserData = async (req, res) => {
                         model: 'Experiment'
                     }
                 ]
-            })
+            });
+
+        for (let device of user.deviceList) {
+            device.currentExperiment.measurements = device.currentExperiment.measurements.slice(
+                -10
+            );
+        }
 
         return res.send({
             user
